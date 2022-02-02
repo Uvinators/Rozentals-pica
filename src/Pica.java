@@ -48,21 +48,21 @@ public class Pica {
 		case "1":
 			cena = cena + 7.95;
 			JOptionPane.showMessageDialog(null, "Studentu pica | izmers: "+izmers+" cena: "+cena);
-			pw.print("Studentu pica | izmers: "+izmers+" cena: "+cena);
+			pw.print("Studentu pica | izmers: "+izmers+" cena: "+cena+"\n");
 			pw.close();
 			cena = 0;
 			break;
 		case "2":
 			cena = cena + 9;
 			JOptionPane.showMessageDialog(null, "Siera pica | izmers: "+izmers+" cena: "+cena);
-			pw.print("Siera pica | izmers: "+izmers+" cena: "+cena);
+			pw.print("Siera pica | izmers: "+izmers+" cena: "+cena+"\n");
 			pw.close();
 			cena = 0;
 			break;
 		case "3":
 			cena = cena + 10.25;
 			JOptionPane.showMessageDialog(null, "Salami pica | izmers: "+izmers+" cena: "+cena);
-			pw.print("Salami pica | izmers: "+izmers+" cena: "+cena);
+			pw.print("Salami pica | izmers: "+izmers+" cena: "+cena+"\n");
 			pw.close();
 			cena = 0;
 			break;
@@ -98,7 +98,7 @@ public class Pica {
 		String izvele;
 		
 		do {
-		izvele = JOptionPane.showInputDialog("1 - Pasutit picu | 2 - Apskatit picu | 3 -  | stop - Apstadinat programmu");
+		izvele = JOptionPane.showInputDialog("1 - Pasutit picu | 2 - Apskatit picu | stop - Apstadinat programmu");
 		izvele=izvele.toLowerCase();
 		
 		switch(izvele) {
@@ -108,8 +108,6 @@ public class Pica {
 			break;
 		case "2":
 				apskatitPicu();
-			break;
-		case "3":
 			break;
 		case "stop":
 			 JOptionPane.showMessageDialog(null, "Programma aptureta", "Bridinajums", JOptionPane.WARNING_MESSAGE);
