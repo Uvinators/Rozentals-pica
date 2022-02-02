@@ -5,17 +5,58 @@ import javax.swing.JOptionPane;
 
 public class Pica {
 	
-	public double cena = 0;
+	public static double cena = 0;
 	
 	public static void pasutitPicu() {
 		String izvele;
+		String izvele2;
+		int izmers;
 		try {
 		FileWriter fw = new FileWriter("picas.txt", true);
 		PrintWriter pw = new PrintWriter(fw);
-		
+		do {
 		izvele = JOptionPane.showInputDialog("1 - Studentu pica | 2 - Siera pica | 3 - Salami pica | 4 - Pastaisita pica | stop - atgriezties");
 		izvele= izvele.toLowerCase();
 		
+		do {
+		izvele2=JOptionPane.showInputDialog("1 - 30cm | 2 - 40cm | 3 - 50cm | stop - atgriezties");
+		izvele2 = izvele2.toLowerCase();
+		
+		switch(izvele2) {
+		case "1":
+			izmers = 30;
+			cena = cena + 2;
+			break;
+		case "2":
+			izmers = 40;
+			cena = cena + 3.50;
+			break;
+		case "3":
+			izmers = 50;
+			cena = cena + 4.50;
+			break;
+		case "stop":
+		 break;
+		 default:
+			 JOptionPane.showMessageDialog(null, "Darbiba nepastav!");
+		}
+		}while(!izvele2.equals("stop"));
+		switch(izvele) {
+		
+		case "1":
+			
+			break;
+		case "2":
+			
+			break;
+		case "stop":
+			
+			break;
+		default:
+			
+		
+		}
+		}while(!izvele.equals("stop"));
 		}catch(Exception e){
 			JOptionPane.showMessageDialog(null, "Radusies kluda!");
 		}
