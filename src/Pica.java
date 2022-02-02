@@ -1,9 +1,24 @@
+import java.io.FileWriter;
+import java.io.PrintWriter;
+
 import javax.swing.JOptionPane;
 
 public class Pica {
 	
+	public double cena = 0;
+	
 	public static void pasutitPicu() {
+		String izvele;
+		try {
+		FileWriter fw = new FileWriter("picas.txt", true);
+		PrintWriter pw = new PrintWriter(fw);
 		
+		izvele = JOptionPane.showInputDialog("1 - Studentu pica | 2 - Siera pica | 3 - Salami pica | 4 - Pastaisita pica | stop - atgriezties");
+		izvele= izvele.toLowerCase();
+		
+		}catch(Exception e){
+			JOptionPane.showMessageDialog(null, "Radusies kluda!");
+		}
 	}
 	
 	public static void apskatitPicu() {
