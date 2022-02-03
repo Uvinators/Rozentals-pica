@@ -16,6 +16,11 @@ public class Pica {
 		try {
 		FileWriter fw = new FileWriter("picas.txt", true);
 		PrintWriter pw = new PrintWriter(fw);
+		String vards, pilseta, iela, maja;
+		vards = JOptionPane.showInputDialog("Ievadiet vardu: ");
+		pilseta = JOptionPane.showInputDialog("Ievadiet pilsetu: ");
+		iela = JOptionPane.showInputDialog("Ievadiet ielu: ");
+		maja = JOptionPane.showInputDialog("Ievadiet maju: ");
 		do {
 		izvele = JOptionPane.showInputDialog("1 - Studentu pica | 2 - Siera pica | 3 - Salami pica | stop - atgriezties");
 		izvele= izvele.toLowerCase();
@@ -48,21 +53,21 @@ public class Pica {
 		case "1":
 			cena = cena + 7.95;
 			JOptionPane.showMessageDialog(null, "Studentu pica | izmers: "+izmers+" cena: "+cena);
-			pw.print("Studentu pica | izmers: "+izmers+" cena: "+cena+"\n");
+			pw.print("Pasutitajs: "+vards+", pilseta: "+pilseta+", iela: "+iela+", maja: "+maja+"\n"+"Studentu pica | izmers: "+izmers+" cena: "+cena+"\n");
 			pw.close();
 			cena = 0;
 			break;
 		case "2":
 			cena = cena + 9;
 			JOptionPane.showMessageDialog(null, "Siera pica | izmers: "+izmers+" cena: "+cena);
-			pw.print("Siera pica | izmers: "+izmers+" cena: "+cena+"\n");
+			pw.print("Pasutitajs: "+vards+", pilseta: "+pilseta+", iela: "+iela+", maja: "+maja+"\n"+"Siera pica | izmers: "+izmers+" cena: "+cena+"\n");
 			pw.close();
 			cena = 0;
 			break;
 		case "3":
 			cena = cena + 10.25;
 			JOptionPane.showMessageDialog(null, "Salami pica | izmers: "+izmers+" cena: "+cena);
-			pw.print("Salami pica | izmers: "+izmers+" cena: "+cena+"\n");
+			pw.print("Pasutitajs: "+vards+", pilseta: "+pilseta+", iela: "+iela+", maja: "+maja+"\n"+"Salami pica | izmers: "+izmers+" cena: "+cena+"\n");
 			pw.close();
 			cena = 0;
 			break;
